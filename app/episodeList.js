@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 
 import axios from "axios";
 
-const Page = () => {
+const episodeList = () => {
   const [webtoons, setWebtoons] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Page = () => {
   console.log(webtoons);
   return (
     <Wrapper>
-      <Link href="/episodeList">웹툰리스트 들어갈예정</Link>
+      <h1>웹툰리스트 들어갈예정</h1>
       {webtoons.map((webtoon) => (
         <div key={webtoon.id}>{webtoon.title}</div>
       ))}
@@ -33,7 +33,7 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default episodeList;
 
 const Wrapper = styled.div`
   width: 600px;
