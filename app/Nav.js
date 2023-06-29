@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 const Nav = () => {
   return (
     <Wrapper>
-      <Header />
+      {/* <Header /> */}
       <WeekList>
         <li>월</li>
         <li>화</li>
