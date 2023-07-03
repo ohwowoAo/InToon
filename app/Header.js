@@ -5,16 +5,14 @@
 import React from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
-import Nav from "./Nav";
 
 const Header = () => {
   return (
     <Wrapper>
       <div>
-        <Link href="/">InToon</Link>
+        <Link href="/home">InToon</Link>
       </div>
       <div>검색창</div>
-      <Nav />
     </Wrapper>
   );
 };
