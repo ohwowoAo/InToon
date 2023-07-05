@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 인툰
 
-## Getting Started
+> 제작목표 : 여러 작가의 웹툰을 보기 편하게 모음사이트 제공
 
-First, run the development server:
+> 기획의도 : 조회수에 따른 순위 노출, 찜하기 & 북마크, 작가정보 클릭하면 작가사이트로 연결, 해시태그 특성에 따라 분리, 신작홍보, 숨어있는 작품 노출
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+> 셋팅환경
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js (Vercel배포예정)
+  - : 근무할때는 CSR를 사용해서 SSR를 접해 보고 싶었고, 포트폴리오가 FireBase로 배포되어있는데 Next로 제작하면 Vercel이 배포하기에 더 편리할 것 같아서 채택
+- Emotion Style Components
+  - : Tailwind가 유지보수가 편하고 CSS 작성시간을 절약할 수 있고 커스터마이징이 쉽다는 장점이 있어서 이번 프로젝트에 사용해 볼까 했는데 퍼블리셔 경력이 있어서 CSS 사용에 제약이 없기 때문에 CSS프레임워크 사용의 장점이 크게 느껴지지 않아 emotion으로 채택
+- TypeScript
+  - : 근무할때 typescript를 사용하지 않았었는데 개발하면서 의도를 명확하게 코드로 기술할수 있고 코드의 가독성을 높이고 예측가능하다는 장점이 끌려 채택
+- Node 이용한 API제작
+  - : 함께 스터디중인 백엔드개발자 분의 도움으로 제작
+- MongoDB
