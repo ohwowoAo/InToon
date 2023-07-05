@@ -2,18 +2,22 @@
 
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import { useRouter } from "next/router";
+import { usePathname, useRouter } from "next/navigation";
 
 const EpisodeList = () => {
+  const pathname = usePathname();
   const router = useRouter();
-  const [title, id] = router.query.params;
+  const { query } = router;
   const [webtoons, setWebtoons] = useState([]);
 
+  console.log(pathname);
+  console.log(query);
+  console.log(router);
   useEffect(() => {
-    if (id) {
+    if (pathname) {
       fetchWebtoons();
     }
-  }, [id]);
+  }, [pathname]);
 
   const fetchWebtoons = async () => {
     try {

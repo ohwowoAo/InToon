@@ -33,7 +33,12 @@ const Page = () => {
 
         {webtoons.map((webtoon) => (
           <Item key={webtoon._id}>
-            <Link href={{ pathname: `/webtoon/${webtoon._id}` }}>
+            <Link
+              href={{
+                pathname: `/webtoon`,
+                query: { webtoonID: `${webtoon._id}` },
+              }}
+            >
               <img src={webtoon.thumbUrl} alt={webtoon.title}></img>
               <p>{webtoon.title}</p>
               <span>{webtoon.author}</span>
