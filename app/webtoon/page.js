@@ -6,12 +6,14 @@ import { useRouter } from "next/router";
 
 const EpisodeList = () => {
   const router = useRouter();
-  const webtoonId = router.query.id;
+  const [title, id] = router.query.params;
   const [webtoons, setWebtoons] = useState([]);
 
   useEffect(() => {
-    fetchWebtoons();
-  }, []);
+    if (id) {
+      fetchWebtoons();
+    }
+  }, [id]);
 
   const fetchWebtoons = async () => {
     try {
