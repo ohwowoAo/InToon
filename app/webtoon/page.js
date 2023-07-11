@@ -2,27 +2,29 @@
 
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import { usePathname, useRouter } from "next/navigation";
+import axios from "axios";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const EpisodeList = () => {
-  const pathname = usePathname();
+  const haaaa = useSearchParams();
   const router = useRouter();
-  const { query } = router;
+  // const { query } = router;
   const [webtoons, setWebtoons] = useState([]);
 
-  console.log(pathname);
-  console.log(query);
-  console.log(router);
   useEffect(() => {
-    if (pathname) {
-      fetchWebtoons();
-    }
-  }, [pathname]);
+    // if (pathname) {
+    fetchWebtoons();
+    // }
+  }, []);
+
+  console.log(haaaa);
+  // console.log(query.webtoonID);
+  console.log(router);
 
   const fetchWebtoons = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/webtoon/${webtoonId}`
+        `http://localhost:3001/webtoon/649aaf46f9e21e039e548e0a`
       );
       setWebtoons(response.data);
       console.log(response.data);
