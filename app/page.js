@@ -6,9 +6,13 @@ import styled from "@emotion/styled";
 
 import axios from "axios";
 import Nav from "./Nav";
+// import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "next/navigation";
 
 const Page = () => {
   const [webtoons, setWebtoons] = useState([]);
+
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     fetchWebtoons();
@@ -34,9 +38,14 @@ const Page = () => {
         {webtoons.map((webtoon) => (
           <Item key={webtoon._id}>
             <Link
-              href={{
-                pathname: `/webtoon`,
-                query: { webtoonID: `${webtoon._id}` },
+              // href={{
+              //   pathname: `/webtoon`,
+              //   query: { webtoonID: `${webtoon._id}` },
+              // }}
+              to={{
+                pathname: "/webtoon",
+                search: searchParams.toString(),
+                state: { webtoonID: `${webtoon._id}` },
               }}
             >
               <img src={webtoon.thumbUrl} alt={webtoon.title}></img>
